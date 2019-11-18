@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="button" id="btnPostLineas">Post</div>
+    <div class="button" id="btnDeleteLineas">Delete</div>
+    <div id="displayResults">
+
+    </div>
+    <script type="module">
+        import {getLineas, postLineas, putLineas, deleteLineas} from './lineasCRUD.js';
+        let a = {
+            "servicio": "Ha funcionado",
+            "precio": 10,
+            "HojaServicioId":1
+        };
+        getLineas();
+        let btnPostLineas = document.getElementById("btnPostLineas");
+        btnPostLineas.addEventListener("click", function(){ postLineas(a)});
+
+        let btnDeleteLineas = document.getElementById("btnDeleteLineas");
+        btnDeleteLineas.addEventListener("mouseup", function(){ deleteLineas(27)});
+    </script>
+</body>
+</html>
+
